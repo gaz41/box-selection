@@ -8,7 +8,7 @@ const copyright = document.getElementById("copy");
 // Default values
 let boxSelected = 0; // Variable to store value of text inside box - can be any value except 1 -10.
 let isBoxPicked = false; // Flag to check if a box is picked
-const msg1 = `<div>number picked&nbsp;&gt; <span class="highlight-result">${isBoxPicked}</span></div>`;
+const msg1 = `<div>number picked&nbsp;= <span class="highlight-result">${isBoxPicked}</span></div>`;
 isBoxSelected.innerHTML = msg1; // Initial message true/false
 displayBoxNum.textContent = "no number picked"; // Initial text to display
 
@@ -36,8 +36,8 @@ function pickNumber() {
   boxes.forEach((box) => box.classList.remove("highlight-box")); // Remove highlight from all boxes
   this.classList.add("highlight-box"); // Highlight the selected box
   isBoxPicked = true; // Set flag indicating a box has been picked
-  isBoxSelected.innerHTML = `<div>number picked&nbsp;&gt; <span class="highlight-result">${isBoxPicked}</span></div>`; // Update message display
-  displayBoxNum.innerHTML = `<div>number picked&nbsp;&gt; <span class="highlight-result">${boxSelected}</span></div>`; // Update selected number display
+  isBoxSelected.innerHTML = `<div>number picked&nbsp;= <span class="highlight-result">${isBoxPicked}</span></div>`; // Update message display
+  displayBoxNum.innerHTML = `<div>number picked&nbsp;= <span class="highlight-result">${boxSelected}</span></div>`; // Update selected number display
 }
 
 // Dynamically generate copyright information
